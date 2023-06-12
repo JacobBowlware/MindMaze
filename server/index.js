@@ -3,6 +3,8 @@ const app = express();
 
 require('./startup/db')();
 require('./startup/routes')(app);
+require('./startup/logging')();
+require('./startup/config')();
 
 const port = 3000;
 app.listen(port, () => {
